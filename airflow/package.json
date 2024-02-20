@@ -1,0 +1,19 @@
+{
+  "name": "airflow",
+  "version": "1.0.0",
+  "description": "Sync DAGS and requirements to AWS MWAA bucket",
+  "scripts": {
+    "sync": "npx ts-node scripts/sync.ts --profile Admin --dagsFolder src"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-mwaa": "^3.427.0",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/uuid": "^9.0.6",
+    "aws-sdk": "^2.1472.0",
+    "uuid": "^9.0.1"
+  }
+}

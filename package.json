@@ -1,0 +1,33 @@
+{
+  "name": "aws-managed-airflow",
+  "version": "1.0.0",
+  "description": "Deploy a Managed Workflow for Apache Airflow environment on AWS using the CDK",
+  "workspaces": [
+    "infra",
+    "airflow"
+  ],
+  "scripts": {
+    "format": "prettier 'infra/**/*.ts' --write",
+    "deploy": "cd infra; npm run deploy;",
+    "sync": "cd airflow; npm run sync;",
+    "ci:all": "npm ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajrunhaar/aws-manages-airflow.git"
+  },
+  "keywords": [],
+  "author": "Shell Stack B.V.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajrunhaar/aws-manages-airflow/issues"
+  },
+  "homepage": "https://github.com/ajrunhaar/aws-manages-airflow#readme",
+  "dependencies": {
+    "@types/node": "^20.11.19"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1"
+  }
+}
